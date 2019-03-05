@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Bit from '../Bit';
 
 class Feed extends React.Component {
