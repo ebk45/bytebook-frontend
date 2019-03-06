@@ -1,3 +1,10 @@
+## APP STRUCTURE
+
+![App Structure](public/twin-app-structure.png)
+[Link to edit](https://docs.google.com/drawings/d/12MViyIlRmtywxoSqjt34os9ufxodbGYmP4twm8pGJaI/edit?usp=sharing)
+
+## REACT README
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
