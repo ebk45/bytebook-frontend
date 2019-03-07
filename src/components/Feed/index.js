@@ -1,8 +1,9 @@
-import React from 'react';
-import Bit from '../Bit';
+import React from "react";
+import Bit from "../Bit";
+import styled from "styled-components";
 
 class Feed extends React.Component {
-  state = { bits: null};
+  state = { bits: null };
 
   componentWillMount() {
     fetch("http://localhost:1234/bits")
@@ -16,14 +17,17 @@ class Feed extends React.Component {
   render() {
     return (
       <React.Fragment>
-      Bytebook Feed
-      {this.state.bits &&
-        this.state.bits.map((bit, index) => {
-          return <Bit body={bit.post} timestamp={bit.createdAt} />;
-        })}
-        </React.Fragment>
+        {this.state.bits &&
+          this.state.bits.map((bit, index) => {
+            return <Bit body={bit.post} timestamp={bit.createdAt} />;
+          })}
+      </React.Fragment>
     );
   }
 }
 
-export default Feed;
+const StyledFeed = styled(Feed)`
+  background-color: blue;
+`;
+
+export default StyledFeed;
