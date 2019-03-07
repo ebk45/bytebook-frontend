@@ -4,7 +4,7 @@ import Bit from '../Bit';
 class Feed extends React.Component {
   state = { bits: null};
 
-  componentWillMount() {
+  componentDidMount() {
     fetch("http://localhost:1234/bits")
       .then(response => response.json())
       .then(json => {
