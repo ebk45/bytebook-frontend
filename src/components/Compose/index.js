@@ -2,6 +2,12 @@ import React from 'react';
 import ByteForm from '../ByteForm';
 
 class Compose extends React.Component {
+  constructor() {
+    super();
+    // this.setUser = this.setUser.bind(this);
+    // console.log(this.setUser)
+  }
+
   handleForm = (event) => {
     event.preventDefault();
     let message = document.getElementById('message').value;
@@ -17,7 +23,7 @@ class Compose extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: body,
+      body: body
     })
     .then(response => response.json())
   }

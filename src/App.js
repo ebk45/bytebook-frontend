@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import StyledLogin from "./components/Login";
 import StyledNav from "./components/Nav";
 import StyledFeed from "./components/Feed";
-import Feed from './components/Feed';
 import Compose from './components/Compose';
 
 function App() {
@@ -22,6 +21,7 @@ function Home() {
   return (
     <React.Fragment>
       <StyledNav />
+      <Compose />
       <StyledFeed />
     </React.Fragment>
   );
