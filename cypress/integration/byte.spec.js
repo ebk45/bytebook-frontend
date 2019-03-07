@@ -1,5 +1,5 @@
 describe("Byte", () => {
-  xit("can visit indervidual Byte", () => {
+  xit("can visit individual Byte", () => {
     cy.visit("/");
   });
 });
