@@ -1,6 +1,5 @@
 import React from "react";
 import Bit from "../Bit";
-import styled from "styled-components";
 
 class Feed extends React.Component {
   state = { bits: null };
@@ -26,8 +25,4 @@ class Feed extends React.Component {
   }
 }
 
-const StyledFeed = styled(Feed)`
-  background-color: blue;
-`;
-
-export default StyledFeed;
+export default Feed;

@@ -2,11 +2,6 @@ import React from 'react';
 import ByteForm from '../ByteForm';
 
 class Compose extends React.Component {
-  constructor() {
-    super();
-    // this.setUser = this.setUser.bind(this);
-    // console.log(this.setUser)
-  }
 
   handleForm = (event) => {
     event.preventDefault();
