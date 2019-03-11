@@ -13,6 +13,9 @@ class Feed extends React.Component {
       });
   }
 
+  //need method for showing bits if user is logged in
+  //shows welcome page if not logged in
+
   render() {
     return (
       <React.Fragment>
@@ -21,7 +24,7 @@ class Feed extends React.Component {
             return <Bit body={bit.post} timestamp={bit.createdAt} />;
           })}
       </React.Fragment>
-    );
+    )
   }
 }
 

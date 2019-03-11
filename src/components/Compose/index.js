@@ -24,7 +24,6 @@ class Compose extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <ByteForm
       handleForm={this.handleForm}

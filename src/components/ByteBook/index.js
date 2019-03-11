@@ -1,8 +1,9 @@
 import React from "react";
-import Nav from "../Nav";
+// import Nav from "../Nav";
 import Feed from "../Feed";
 import Compose from "../Compose";
-import Welcome from "../Welcome";
+import Nav from "../Nav";
+
 
 export class ByteBook extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export class ByteBook extends React.Component {
     .then((res) => {
       const isLoggedIn = res;
       this.setState({ isLoggedIn });
-      console.log(this.state.isLoggedIn.success)
+      console.log(this.state.isLoggedIn)
     })
   }
 
@@ -50,38 +51,14 @@ export class ByteBook extends React.Component {
     //  return alert('Authentication failed. User not found.')
   }
 
-  function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn.success;
-    if (isLoggedIn) {
-      return (
-        <div className="loggedInDisplay">
-        <Compose />
-        <Feed />
-        </div>
-      );
-    }
-    return <Welcome />;
-  }
-
   render() {
-    const isLoggedIn = this.state.isLoggedIn.success;
-    let display;
-
-    if (isLoggedIn) {
-      display =
-      <React.Fragment>
-      <div className="loggedInDisplay>">
-        <Compose />
-      </div>;
-      </React.Fragment>
-    }
-    return <Welcome />;
-
     return (
-      <div className="bytebook">
-        <Greeting isLoggedIn={isLoggedIn} />
+      <div className="main_page">
+      <Nav/>
+      <Compose/>
+      <Feed/>
       </div>
-    )
+    );
   }
 }
 
